@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Portal Login</title>
+
+<style>
+:root{
+    --primary:#0067b8;
+    --text:#1b1b1b;
+    --muted:#666;
+    --border:#d6d6d6;
+    --bg:#f2f2f2;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#f8f9fb,#eef2f7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.login-card{
+    width:440px;
+    background:#fff;
+    padding:48px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
+    border-radius:8px;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    background:var(--primary);
+    border-radius:8px;
+    margin-bottom:24px;
+}
+
+h1{
+    font-size:28px;
+    font-weight:600;
+    color:var(--text);
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:var(--muted);
+    margin-bottom:30px;
+    line-height:1.5;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid var(--border);
+    border-radius:4px;
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+.forgot{
+    display:inline-block;
+    margin-top:10px;
+    color:var(--primary);
+    text-decoration:none;
+    font-size:14px;
+}
+
+.actions{
+    margin-top:30px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:12px 34px;
+    border-radius:4px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+}
+
+button:hover{
+    opacity:.95;
+}
+
+.footer{
+    margin-top:28px;
+    color:#777;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+
+    <div class="logo"></div>
+
+    <h1>Sign in</h1>
+
+    <p class="subtitle">
+        Access your organization's secure portal.
+    </p>
+
+    <form method="POST" action="/login">
+
+        <div class="form-group">
+            <input
+                type="email"
+                name="email"
+                placeholder="Email address"
+                required>
+        </div>
+
+        <div class="form-group">
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+        </div>
+
+        <a href="#" class="forgot">Forgot password?</a>
+
+        <div class="actions">
+            <button type="submit">
+                Sign In
+            </button>
+        </div>
+
+    </form>
+
+    <div class="footer">
+        Secure access portal • Protected by your organization
+    </div>
+
+</div>
+
+</body>
+</html>
+```
